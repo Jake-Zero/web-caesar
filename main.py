@@ -49,9 +49,4 @@ def encrypt():
     encryption = rotate_string(text, int(rot))
     return form.format(encryption)
 
-@app.route("/hello", methods=["post"])
-def hello():
-    first_name = request.form["first_name"]
-    return "<h1>Hello, " + html.escape(first_name) + "</h1>"
-
 app.run()
